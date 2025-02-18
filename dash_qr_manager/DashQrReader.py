@@ -17,8 +17,7 @@ Keyword arguments:
     ClassName for the container element.
 
 - constraints (dict; optional):
-    Dash-assigned callback that should be called to report property
-    changes to Dash, to make them available for callbacks.
+    Specify which camera should be used (if available).
 
 - containerStyle (dict; optional):
     Style object for the container element.

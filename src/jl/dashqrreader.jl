@@ -11,8 +11,7 @@ for more information: https://www.npmjs.com/package/react-qr-reader
 Keyword arguments:
 - `id` (String; optional): The ID used to identify this component in Dash callbacks.
 - `className` (String; optional): ClassName for the container element.
-- `constraints` (Dict; optional): Dash-assigned callback that should be called to report property changes
-to Dash, to make them available for callbacks.
+- `constraints` (Dict; optional): Specify which camera should be used (if available)
 - `containerStyle` (Dict; optional): Style object for the container element.
 - `result` (String; optional): decoded data
 - `scanDelay` (Real; optional): The scan period for the QR hook

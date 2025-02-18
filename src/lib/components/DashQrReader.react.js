@@ -91,12 +91,12 @@ DashQrReader.propTypes = {
      */
     result: PropTypes.string,
     /**
-     * Dash-assigned callback that should be called to report property changes
-     * to Dash, to make them available for callbacks.
+     * Specify which camera should be used (if available)
      */
     constraints: PropTypes.object,
     /**
-     * Specify which camera should be used (if available)
+     * Dash-assigned callback that should be called to report property changes
+     * to Dash, to make them available for callbacks.
      */
     setProps: PropTypes.func
 };

@@ -21,8 +21,7 @@ videoStyle=NULL)
 
 \item{className}{Character. ClassName for the container element.}
 
-\item{constraints}{Named list. Dash-assigned callback that should be called to report property changes
-to Dash, to make them available for callbacks.}
+\item{constraints}{Named list. Specify which camera should be used (if available)}
 
 \item{containerStyle}{Named list. Style object for the container element.}
 
