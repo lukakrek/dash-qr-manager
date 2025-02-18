@@ -3,10 +3,10 @@ module DashQrManager
 using Dash
 
 const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
-const version = "0.0.4"
+const version = "0.0.5"
 
-include("jl/''_dashqrgenerator.jl")
-include("jl/''_dashqrreader.jl")
+include("jl/dashqrgenerator.jl")
+include("jl/dashqrreader.jl")
 
 function __init__()
     DashBase.register_package(

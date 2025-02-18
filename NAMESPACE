@@ -1,4 +1,8 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
-export(''DashQrGenerator)
-export(''DashQrReader)
+export(DashQrGenerator)
+export(DashQrReader)
+export(dashQrGenerator)
+export(DashQrReader)
+export(DashQrGenerator)
+export(dashQrReader)

@@ -16,6 +16,10 @@ Keyword arguments:
 - className (string; optional):
     ClassName for the container element.
 
+- constraints (dict; optional):
+    Dash-assigned callback that should be called to report property
+    changes to Dash, to make them available for callbacks.
+
 - containerStyle (dict; optional):
     Style object for the container element.
 
@@ -41,17 +45,14 @@ Keyword arguments:
     _namespace = 'dash_qr_manager'
     _type = 'DashQrReader'
     @_explicitize_args
-    def __init__(self, id=Component.UNDEFINED, style=Component.UNDEFINED, videoId=Component.UNDEFINED, scanDelay=Component.UNDEFINED, className=Component.UNDEFINED, containerStyle=Component.UNDEFINED, videoContainerStyle=Component.UNDEFINED, videoStyle=Component.UNDEFINED, result=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['id', 'className', 'containerStyle', 'result', 'scanDelay', 'style', 'videoContainerStyle', 'videoId', 'videoStyle']
+    def __init__(self, id=Component.UNDEFINED, style=Component.UNDEFINED, videoId=Component.UNDEFINED, scanDelay=Component.UNDEFINED, className=Component.UNDEFINED, containerStyle=Component.UNDEFINED, videoContainerStyle=Component.UNDEFINED, videoStyle=Component.UNDEFINED, result=Component.UNDEFINED, constraints=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['id', 'className', 'constraints', 'containerStyle', 'result', 'scanDelay', 'style', 'videoContainerStyle', 'videoId', 'videoStyle']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['id', 'className', 'containerStyle', 'result', 'scanDelay', 'style', 'videoContainerStyle', 'videoId', 'videoStyle']
+        self.available_properties = ['id', 'className', 'constraints', 'containerStyle', 'result', 'scanDelay', 'style', 'videoContainerStyle', 'videoId', 'videoStyle']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()
         _locals.update(kwargs)  # For wildcard attrs and excess named props
-        args = {k: _locals[k] for k in _explicit_args if k != 'children'}
-        for k in []:
-            if k not in args:
-                raise TypeError(
-                    'Required argument `' + k + '` was not specified.')
+        args = {k: _locals[k] for k in _explicit_args}
+
         super(DashQrReader, self).__init__(**args)

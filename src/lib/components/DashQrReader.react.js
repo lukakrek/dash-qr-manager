@@ -20,7 +20,8 @@ export default class DashQrReader extends Component {
             containerStyle,
             videoContainerStyle,
             videoStyle,
-            setProps
+            setProps,
+            constraints
         } = this.props;
 
         return (
@@ -43,6 +44,7 @@ export default class DashQrReader extends Component {
                     containerStyle={containerStyle}
                     videoContainerStyle={videoContainerStyle}
                     videoStyle={videoStyle}
+                    constraints={constraints}
                 />
             </div>
         );
@@ -91,6 +93,10 @@ DashQrReader.propTypes = {
     /**
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.
+     */
+    constraints: PropTypes.object,
+    /**
+     * Specify which camera should be used (if available)
      */
     setProps: PropTypes.func
 };
